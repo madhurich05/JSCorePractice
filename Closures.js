@@ -21,4 +21,7 @@ In other words
   This will let the function definition to have an associated persistent memory which could hold on to live data between function executions.
   The combination of the function and the scope chain (lexical env) is "Closure"
   
+  An inner function has access to variables in the outer function scope even after outer function has finished execution
+
+Application of closures: Memoization, module prattern which provides data privacy, promises etc.,
 */
