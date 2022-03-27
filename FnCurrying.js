@@ -3,7 +3,7 @@ Currying is a process in functional programming where we transform
 a function with multiple arguments into a sequence of nesting functions 
 that take one arg at a time Ex: fn(a,b,c) -> fn(a)(b)(c)
 
-Currying doesn't call a function, it simply transforms it
+Currying doesn't call a function, it simply transforms it, currying is possible because of closures
 
 Why it’s useful ?
 Currying helps we avoid passing the same variable again and again.
