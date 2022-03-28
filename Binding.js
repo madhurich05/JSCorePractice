@@ -2,7 +2,7 @@
 4 ways to invoke functions and each serves as a rule to determine what 'this' keyword is referencing
 
 1. Implicit Binding
-2. Explicit Binding
+2. Explicit Binding: Call, Apply, Bind
 3. 'new' Binding
 4. Default Binding
 */
@@ -66,7 +66,31 @@ bindingFn();
 
 // Using new
 
+/*
+1. We can invoke a function with new keyword, JS under the hood will create a new empty object that 'this' keyword will reference to
+2. 'this' will always reference to empty object and properties are added using dot notation
+*/
 
+function Person1(name) {  // Constructor Function
+  // under the hood this = {}
+  this.name = name;  // Add properties to the object using dot notation
+}
+const p1 = new Person1('Madhuri')
+const p2 = new Person1('Ram')
+const p3 = new Person1('Yashvi')
+
+
+// Default binding: If none of the other 3 rules are matched, then JS will default to global scope and set this to window object
+
+function greetMyName() { 
+  console.log(`My name is ${this.name}`)
+}
+
+//Returns My name is undefined
+
+/*
+ Order of Precendence of bindings: new -> Implicit -> Explicit -> Default
+*/
 -------------------------------------------------------------------------------------------------------------------------------------
 
   
