@@ -55,12 +55,17 @@ greetingWithHobbies.call(Person, 'Gardening', 'Art');
 greeting.apply(Person);  
 greetingWithHobbies.apply(Person, ['Gardening', 'Art']);
 
-
 // Using Bind
-
 /*
 Bind method is similar to call except that instead of invoking fn it returns a fn that you can invoke whenever you wish to
 */
+
+const bindingFn = greetingWithHobbies.bind(Person, 'Gardening', 'Art');
+bindingFn();
+
+
+// Using new
+
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
