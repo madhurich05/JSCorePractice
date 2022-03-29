@@ -20,3 +20,12 @@ function generalCurryOne(f) {
   let curriedSum = generalCurryOne(sum);
   curriedSum(2,3);
   curriedSum(2)(3);
+
+
+// this works for 2 args but not working for more args
+function generalCurryTwo(f) {
+  return function currify(...args) {
+    return (args.length >= f.length) ? return f.apply(this, args) : currify.bind(this,...args);
+  }
+}
+}
