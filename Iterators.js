@@ -1,5 +1,5 @@
 const obj = {
-[Symbol.iterator] = function() {
+[Symbol.iterator]: function() {
 let step = 0;
   const iterator = {
     next: function() {
@@ -17,5 +17,8 @@ let step = 0;
 }
 
 for(const word of obj) {
-console.log(word);
+console.log(word); 
 }
+
+// logs 'Hello' 
+// 'World
