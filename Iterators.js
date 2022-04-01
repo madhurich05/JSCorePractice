@@ -16,9 +16,18 @@ let step = 0;
 }
 }
 
+// for of way
 for(const word of obj) {
 console.log(word); 
 }
 
 // logs 'Hello' 
 // 'World
+
+
+// using symbol iterator
+
+const objIterator = obj[Symbol.iterator]()
+objIterator.next() // logs {value: 'Hello', done: false}
+objIterator.next() // logs {value: 'World', done: false}
+objIterator.next() // logs {value: undefined, done: true}
